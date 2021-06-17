@@ -1,25 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './scss/App.scss';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+import Start from './components/Start'
+import OmOss from './components/OmOss'
+import Kontakt from './components/Kontakt'
+import Kop from './components/Kop'
+import Prenumeration from './components/Prenumeration'
+import Butiker from './components/Butiker'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Start></Start>
+        </Route>
+        <Route path="/omoss">
+          <OmOss></OmOss>
+        </Route>
+        <Route path="/kontakt">
+          <Kontakt></Kontakt>
+        </Route>
+        <Route exact path="/kop">
+          <Kop></Kop>
+        </Route>
+        <Route exact path="/prenumeration">
+          <Prenumeration></Prenumeration>
+        </Route>
+        <Route exact path="/butiker">
+          <Butiker></Butiker>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
