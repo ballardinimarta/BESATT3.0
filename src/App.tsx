@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <header>
-       <div id="logoContainer"></div>
+       <a href="/"><div id="logoContainer"></div></a>
         {toggle && <button id="navBtn" onClick={() => {setToggle(!toggle)}}>Stäng</button>}
         {!toggle && <button id="navBtn" onClick={() => {setToggle(!toggle)}}>Meny</button>}
       </header>

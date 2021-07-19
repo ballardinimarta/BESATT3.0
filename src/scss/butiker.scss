@@ -1,10 +1,11 @@
 @import 'mixins';
 html {
     body {
-        #container {
+        #butikercontainer {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            flex-direction: row;
             @include phone {
                 flex-direction: column;
                 width: 100%;
