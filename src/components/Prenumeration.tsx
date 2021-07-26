@@ -1,6 +1,7 @@
 import React, { ChangeEvent, useState } from 'react'
 import emailjs from 'emailjs-com';
 import '../scss/prenumeration.scss'
+import { useHistory } from "react-router-dom";
 
 interface IForm {
     name: string;
@@ -26,6 +27,7 @@ export default function Prenumeration() {
         setForm({...form,[name]: e.target.value});
     }
     function sendForm (e) {
+
         e.preventDefault();
         emailjs.init("user_MnAUJ3gcuwBkR1yYU48WJ");
 
@@ -37,6 +39,9 @@ export default function Prenumeration() {
             zip: form.zip,
             city: form.city,
         });
+        useHistory.push("/tack");
+
+
     }
 
     return (

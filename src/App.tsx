@@ -8,6 +8,8 @@ import Kontakt from './components/Kontakt'
 import Kop from './components/Kop'
 import Prenumeration from './components/Prenumeration'
 import Butiker from './components/Butiker'
+import Tack from './components/Tack'
+
 import tukio from './img/tukio.jpg'
 import rundvitlogga from './img/rundloggavit.svg'
 
@@ -53,6 +55,9 @@ function App() {
           </Route>
           <Route exact path="/butiker">
             <Butiker></Butiker>
+          </Route>
+          <Route exact path="/tack">
+            <Tack></Tack>
           </Route>
         </Switch>
       </Router>
