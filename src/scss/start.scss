@@ -8,7 +8,8 @@
     #nyhetsbild {
         width: 400px;
         @include phone {
-            width: 200px;
+            width: 270px;
+            padding: 10px 0px;
         }
     }
     #picturecontainer {

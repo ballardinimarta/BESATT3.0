@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './scss/App.scss';
+import './scss/app.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom';
 import Start from './components/Start'

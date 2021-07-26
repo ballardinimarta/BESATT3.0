@@ -18,8 +18,8 @@ html {
             width: 80%;
             padding-left: 20%;
             @include phone {
-                padding-left: 25%;
-                width: 75%;
+                padding-left: 30%;
+                width: 70%;
 
             }
             #logoContainer {
@@ -30,9 +30,9 @@ html {
                 height: 200px;
                 width: 600px;
                 @include phone {
-                    height: 120px;
-                    width: 120px;
-                    margin: 10px 0px;
+                    height: 100px;
+                    width: 100px;
+                    margin: 15px 0px;
                     background-image: url('../img/rundloggavit.svg');
                 }
             }

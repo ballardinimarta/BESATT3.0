@@ -43,7 +43,6 @@ export default function Prenumeration() {
         });
         history.push("/tack");
 
-
     }
 
     return (
