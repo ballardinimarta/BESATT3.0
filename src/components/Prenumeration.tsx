@@ -12,6 +12,8 @@ interface IForm {
     city: string;
 }
 export default function Prenumeration() {
+    let history = useHistory();
+
     const defval: IForm = {
         name: '',
         email: '',
@@ -39,7 +41,7 @@ export default function Prenumeration() {
             zip: form.zip,
             city: form.city,
         });
-        useHistory.push("/tack");
+        history.push("/tack");
 
 
     }
