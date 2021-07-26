@@ -30,6 +30,7 @@ html {
             width: 80%;
             @include phone {
                 padding: 20px 0px;
+                flex-direction: column;
             }
             
             .magazineWrapper {
