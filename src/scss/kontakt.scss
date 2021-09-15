@@ -11,9 +11,7 @@ html {
             a{
                 list-style-type: none;
                 color: inherit;
-                @include phone {
-                    font-size: 90%;
-                }
+                
             }
         }
     }

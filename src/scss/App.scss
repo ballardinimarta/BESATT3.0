@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 @import 'mixins';
 html {
     body {
         background-color: rgb(0, 0, 0);
         color: #ffffff;
-        font-family: 'Roboto Mono', monospace;
+        font-family: 'Playfair Display', serif;
         width: 100%;
         margin: 0px;
         div {
@@ -41,8 +42,8 @@ html {
                 color: inherit;
                 font-size: 150%;
                 border: none;
-                font-family: inherit;
-                font-weight: 500;
+                font-family: 'Azeret Mono', monospace;
+                font-weight: 600;
                 z-index: 2;
                 @include phone {
                     font-size: 100%;
