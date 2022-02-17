@@ -2,134 +2,130 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 @import 'mixins';
 html {
-    body {
-        background-color: rgb(0, 0, 0);
-        color: #ffffff;
-        font-family: 'Playfair Display', serif;
-        width: 100%;
-        margin: 0px;
-        div {
-            width: 100%;
-        }
-        header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            width: 80%;
-            padding-left: 20%;
-            @include phone {
-                padding-left: 30%;
-                width: 70%;
+	body {
+		background-color: rgb(0, 0, 0);
+		color: #ffffff;
+		font-family: 'Playfair Display', serif;
+		width: 100%;
+		margin: 0px;
+		div {
+			width: 100%;
+		}
+		header {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			width: 80%;
+			padding-left: 20%;
+			@include phone {
+				padding-left: 30%;
+				width: 70%;
+			}
+			#logoContainer {
+				background-image: url('../img/whiteLogo.svg');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				height: 200px;
+				width: 600px;
+				@include phone {
+					height: 100px;
+					width: 100px;
+					margin: 15px 0px;
+					background-image: url('../img/rundloggavit.svg');
+				}
+			}
+			#navBtn {
+				background-color: transparent;
+				color: inherit;
+				font-size: 150%;
+				border: none;
+				font-family: 'Azeret Mono', monospace;
+				font-weight: 600;
+				z-index: 2;
+				@include phone {
+					font-size: 100%;
+				}
+			}
+		}
+		#nav {
+			width: 100%;
+			height: 100vh;
+			background-color: plum;
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			z-index: 1;
+			@include phone {
+				flex-direction: column;
+			}
 
-            }
-            #logoContainer {
-                background-image: url('../img/whiteLogo.svg');
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                height: 200px;
-                width: 600px;
-                @include phone {
-                    height: 100px;
-                    width: 100px;
-                    margin: 15px 0px;
-                    background-image: url('../img/rundloggavit.svg');
-                }
-            }
-            #navBtn {
-                background-color: transparent;
-                color: inherit;
-                font-size: 150%;
-                border: none;
-                font-family: 'Azeret Mono', monospace;
-                font-weight: 600;
-                z-index: 2;
-                @include phone {
-                    font-size: 100%;
-                }
-            }
-            // #navBtn:hover {
-            //     text-decoration: underline;   
-            // }
-        }
-        #nav {
-            width: 100%;
-            height: 100vh;
-            background-color: plum;
-            position: fixed;
-            top: 0;
-            left: 0;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            z-index: 1;
-            @include phone {
-                flex-direction: column;
-            }
-
-            div {
-                padding: 20px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                align-items: flex-start;
-                width: 30%;
-                @include phone {
-                    width: 80%;
-                    padding: 0;
-                    font-size: 70%;
-                }
-                a {
-                    color: inherit;
-                    font-size: 200%;
-                    text-decoration: none;
-                    padding: 10px;
-                    transition: ease-in .1s;
-                }
-                a:hover {
-                    font-size: 250%;
-                    font-weight: 500;
-                }
-            }
-            img {
-                animation: spin 7s linear 0s infinite;
-                width: 400px;
-                @include phone {
-                    width: 100px;
-                }
-            }
-        }
-        footer {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: palevioletred;
-            padding: 20px 0;
-            @include phone {
-                width: 100%;
-            }
-            a {
-                height: 30px;
-                text-decoration: none;
-                color: inherit;
-                margin: 10px;
-                i {
-                    font-size: 30px;
-                }
-                img {
-                    width: 30px;
-                }
-            }
-        }
-    }
+			div {
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				align-items: flex-start;
+				width: 30%;
+				@include phone {
+					width: 80%;
+					padding: 0;
+					font-size: 70%;
+				}
+				a {
+					color: inherit;
+					font-size: 200%;
+					text-decoration: none;
+					padding: 10px;
+					transition: ease-in 0.1s;
+				}
+				a:hover {
+					font-size: 250%;
+					font-weight: 500;
+				}
+			}
+			img {
+				animation: spin 7s linear 0s infinite;
+				width: 400px;
+				@include phone {
+					width: 100px;
+				}
+			}
+		}
+		footer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			padding: 20px 0;
+			@include phone {
+				width: 100%;
+			}
+			a {
+				height: 30px;
+				text-decoration: none;
+				color: inherit;
+				margin: 10px;
+				i {
+					font-size: 30px;
+				}
+				img {
+					width: 30px;
+				}
+			}
+		}
+	}
 }
 
 @keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
