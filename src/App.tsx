@@ -4,13 +4,13 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom';
 import Start from './components/Start';
 import OmOss from './components/OmOss';
-import Kontakt from './components/Kontakt';
-import Kop from './components/Kop';
-import Prenumeration from './components/Prenumeration';
+import Arkiv from './components/Arkiv';
 import Butiker from './components/Butiker';
-import Tack from './components/Tack';
 import rundvitlogga from './img/rundloggavit.svg';
-
+import FragaBesatt from './components/FragaBesatt';
+import Merch from './components/Merch';
+import star from './img/Red_star.png';
+import Star from './components/Star';
 function App() {
 	const [toggle, setToggle] = useState(false);
 	return (
@@ -44,11 +44,12 @@ function App() {
 				<div id="nav">
 					<div>
 						<a href="/">Hem</a>
-						<a href="/kop">Köp</a>
+						<a href="/arkiv">Arkiv</a>
 						<a href="/butiker">Butiker</a>
-						<a href="/prenumeration">Prenumeration</a>
 						<a href="/omoss">Om oss</a>
-						<a href="/kontakt">Kontakt</a>
+						<a href="/star">
+							<img src={star} alt="stjärna" />
+						</a>
 					</div>
 					<img src={rundvitlogga} alt="rund vit logga"></img>
 				</div>
@@ -59,23 +60,25 @@ function App() {
 					<Route exact path="/">
 						<Start></Start>
 					</Route>
+					<Route exact path="/merch">
+						<Merch></Merch>
+					</Route>
 					<Route path="/omoss">
 						<OmOss></OmOss>
 					</Route>
-					<Route path="/kontakt">
-						<Kontakt></Kontakt>
-					</Route>
-					<Route exact path="/kop">
-						<Kop></Kop>
-					</Route>
-					<Route exact path="/prenumeration">
-						<Prenumeration></Prenumeration>
+
+					<Route exact path="/arkiv">
+						<Arkiv></Arkiv>
 					</Route>
 					<Route exact path="/butiker">
 						<Butiker></Butiker>
 					</Route>
-					<Route exact path="/tack">
-						<Tack></Tack>
+					<Route exact path="/star">
+						<Star></Star>
+					</Route>
+
+					<Route exact path="/fragabesatt">
+						<FragaBesatt></FragaBesatt>
 					</Route>
 				</Switch>
 			</Router>
@@ -90,7 +93,16 @@ function App() {
 				>
 					<i className="fab fa-spotify"></i>
 				</a>
-				{/* <a href="http://tukio.se/hosts/15" target="_blank" rel="noopener noreferrer"><img src={tukio} alt="tukiologga"/></a> */}
+				<a
+					href="https://www.youtube.com/@besattmagazine4842"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<i className="fab fa-youtube"></i>
+				</a>
+				<a target="_blank" rel="noreferrer" href="mailto:besattmagazine@gmail.com">
+					<i className="fa fa-envelope"></i>
+				</a>
 			</footer>
 		</>
 	);

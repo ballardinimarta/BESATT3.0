@@ -51,23 +51,35 @@ export default function Butiker() {
 		return renderStore(b, 'sverige', i);
 	});
 	return (
-		<div id="butikercontainer">
-			<div className="cityContainer" id="stockholm">
-				<h1>Stockholm</h1>
-				{sthmlhtml}
+		<>
+			<p>Besatt säljs för tillfället endast i butiker.</p>
+			<p>
+				Är du en butik och vill sälja Besatt? Kontakta vår distributör Nätverkstan ({' '}
+				<a href="https://www.natverkstan.net/">https://www.natverkstan.net/</a>).
+			</p>
+			<p>Finns Besatt inte i din hemstad? Be din lokala tidningsbutik köpa in oss!</p>
+			<p>
+				Ibland säljer vi Besatt i andra sammanhang (pop-up butiker, marknader, fester), då lägger vi
+				upp det på vår instagram!
+			</p>
+			<div id="butikercontainer">
+				<div className="cityContainer" id="stockholm">
+					<h1>Stockholm</h1>
+					{sthmlhtml}
+				</div>
+				<div className="cityContainer" id="skåne">
+					<h1>Skåne</h1>
+					{skanehtml}
+				</div>
+				<div className="cityContainer" id="göteborg">
+					<h1>Göteborg</h1>
+					{gbghtml}
+				</div>
+				<div className="cityContainer" id="övriga sverige">
+					<h1>Övriga Sverige</h1>
+					{svhtml}
+				</div>
 			</div>
-			<div className="cityContainer" id="skåne">
-				<h1>Skåne</h1>
-				{skanehtml}
-			</div>
-			<div className="cityContainer" id="göteborg">
-				<h1>Göteborg</h1>
-				{gbghtml}
-			</div>
-			<div className="cityContainer" id="övriga sverige">
-				<h1>Övriga Sverige</h1>
-				{svhtml}
-			</div>
-		</div>
+		</>
 	);
 }

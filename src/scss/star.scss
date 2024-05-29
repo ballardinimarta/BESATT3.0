@@ -1,0 +1,11 @@
+.gallery {
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 1rem;
+	img,
+	iframe {
+		width: 100%;
+		height: auto;
+	}
+}

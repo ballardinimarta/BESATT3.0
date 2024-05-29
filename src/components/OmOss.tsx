@@ -38,6 +38,17 @@ export default function OmOss() {
 					<img src={omoss2} alt="bild på redaktörena"></img>
 				</div>
 			</div>
+			<div id="kontaktContainer">
+				<p>
+					Email:{' '}
+					<a target="_blank" rel="noreferrer" href="mailto:besattmagazine@gmail.com">
+						besattmagazine@gmail.com
+					</a>
+				</p>
+				<p>
+					Hemsida gjord av Märta Ballardini, <a href="https://ballardini.se">Ballardini.se</a>.
+				</p>
+			</div>
 		</>
 	);
 }

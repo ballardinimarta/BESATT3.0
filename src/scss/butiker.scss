@@ -1,6 +1,13 @@
 @import 'mixins';
 html {
 	body {
+		p {
+			width: 90%;
+			text-align: center;
+			a {
+				color: inherit;
+			}
+		}
 		#butikercontainer {
 			display: flex;
 			justify-content: space-between;
@@ -26,9 +33,10 @@ html {
 				}
 				h1 {
 					font-weight: 400;
+					color: rgb(0, 153, 255);
 				}
 				.storeContainer {
-					border: 3px solid palevioletred;
+					border: 3px solid rgb(0, 153, 255);
 					padding: 10px;
 					margin: 10px 0;
 					width: 90%;

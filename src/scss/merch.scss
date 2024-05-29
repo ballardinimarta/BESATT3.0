@@ -1,0 +1,18 @@
+@import 'mixins';
+
+.merch-container {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	justify-content: center;
+	@include phone {
+		flex-direction: column;
+	}
+
+	img {
+		width: 400px;
+		@include phone {
+			width: 70%;
+		}
+	}
+}

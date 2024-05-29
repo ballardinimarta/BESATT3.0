@@ -19,8 +19,7 @@
 		flex-wrap: wrap;
 		width: 70%;
 		img {
-			width: 500px;
-			height: 500px;
+			width: 600px;
 			@include phone {
 				flex-direction: column;
 				width: 100%;

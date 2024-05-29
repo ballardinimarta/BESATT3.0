@@ -1,13 +1,13 @@
 @mixin textPink {
-    padding: 10px;
-    text-decoration: none;
-    font-size: 25px;
-    color: pink;
-    text-shadow: 3px 3px 0px rgb(161, 9, 35);
+	padding: 10px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #d80000;
+	text-shadow: 1px 1px 0px #000;
 }
 
 @mixin phone {
-    @media screen and (max-width: 620px){
-        @content;
-    }
+	@media screen and (max-width: 620px) {
+		@content;
+	}
 }
