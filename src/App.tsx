@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './scss/App.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Start from './components/Start';
 import OmOss from './components/OmOss';
 import Arkiv from './components/Arkiv';
@@ -56,31 +56,31 @@ function App() {
 			)}
 
 			<Router>
-				<Switch>
-					<Route exact path="/">
+				<Routes>
+					<Route path="/">
 						<Start></Start>
 					</Route>
-					<Route exact path="/merch">
+					<Route path="/merch">
 						<Merch></Merch>
 					</Route>
 					<Route path="/omoss">
 						<OmOss></OmOss>
 					</Route>
 
-					<Route exact path="/arkiv">
+					<Route path="/arkiv">
 						<Arkiv></Arkiv>
 					</Route>
-					<Route exact path="/butiker">
+					<Route path="/butiker">
 						<Butiker></Butiker>
 					</Route>
-					<Route exact path="/star">
+					<Route path="/star">
 						<Star></Star>
 					</Route>
 
-					<Route exact path="/fragabesatt">
+					<Route path="/fragabesatt">
 						<FragaBesatt></FragaBesatt>
 					</Route>
-				</Switch>
+				</Routes>
 			</Router>
 			<footer>
 				<a href="https://www.instagram.com/besatt.mag/" target="_blank" rel="noopener noreferrer">

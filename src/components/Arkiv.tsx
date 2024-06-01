@@ -32,7 +32,7 @@ export default function Arkiv() {
 				/>
 				<div className="overlay">
 					<p className="magInfo">
-						NR.{mag.content.Nummer} <br /> {mag.content.Utgiven}
+						NR.{mag.content.Nummer.toString()} <br /> {mag.content.Utgiven}
 					</p>
 				</div>
 			</div>
